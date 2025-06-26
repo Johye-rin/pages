@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OECD 티칭 컴퍼스: 교사의 새로운 역할</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f0f9ff; /* sky-50 */
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #0ea5e9, #14b8a6); /* sky-500 to teal-500 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-flip-container {
+            perspective: 1000px;
+        }
+        .card-flipper {
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        .card-flip-container:hover .card-flipper {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .card-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold gradient-text">
+                <i class="fas fa-compass mr-2"></i>OECD Teaching Compass
+            </h1>
+            <p class="hidden md:block text-slate-500">교사, 교육과정 변화의 주체로 거듭나다</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Introduction Section -->
+        <section class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">교사의 역할을 재정의하다</h2>
+            <p class="max-w-3xl mx-auto text-lg text-slate-600">
+                OECD 티칭 컴퍼스는 급변하는 세상 속에서 교사가 나아가야 할 방향을 제시하는 미래지향적 프레임워크입니다. 학생의 주도성, 역량, 웰빙을 중심으로 하는 <strong class="text-sky-600">러닝 컴퍼스(Learning Compass)</strong>를 실현하기 위해, 교사를 교육과정 변화의 핵심 주체로 재조명합니다.
+            </p>
+        </section>
+
+        <!-- Key Concepts Section -->
+        <section class="mb-20">
+            <h3 class="text-3xl font-bold text-center mb-10">티칭 컴퍼스의 6가지 핵심 개념</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1. Making the future we want a reality -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="text-teal-500 text-4xl mb-4"><i class="fas fa-globe-americas"></i></div>
+                    <h4 class="text-xl font-bold mb-2">미래를 현실로</h4>
+                    <p class="text-slate-600">학생과 교사 모두를 위한 공동의 비전과 목적을 명확히 하고, 교육을 미래에 대한 집단적 열망과 연결합니다.</p>
+                </div>
+                <!-- 2. Anchoring the Compass -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="text-teal-500 text-4xl mb-4"><i class="fas fa-anchor"></i></div>
+                    <h4 class="text-xl font-bold mb-2">내면의 닻 (Self-Concept)</h4>
+                    <p class="text-slate-600">강력한 직업적 정체성과 윤리적 가치를 바탕으로 복잡한 교육 환경을 헤쳐나갈 수 있는 내면의 중심을 구축합니다.</p>
+                </div>
+                <!-- 3. Teacher agency -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="text-teal-500 text-4xl mb-4"><i class="fas fa-fist-raised"></i></div>
+                    <h4 class="text-xl font-bold mb-2">교사 주도성 (Agency)</h4>
+                    <p class="text-slate-600">교사에게 자율성, 자신감, 역량을 부여하여 교육 현장에서 의미 있는 혁신과 변화를 주도하도록 합니다.</p>
+                </div>
+                <!-- 4. Teacher competencies -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="text-teal-500 text-4xl mb-4"><i class="fas fa-cogs"></i></div>
+                    <h4 class="text-xl font-bold mb-2">핵심 역량</h4>
+                    <p class="text-slate-600">지식, 기술, 태도 및 가치를 통합하여 복잡성, 불확실성, 지속적인 변화에 효과적으로 대처하는 능력을 기릅니다.</p>
+                </div>
+                <!-- 5. Teacher well-being -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="text-teal-500 text-4xl mb-4"><i class="fas fa-heart-pulse"></i></div>
+                    <h4 class="text-xl font-bold mb-2">교사 웰빙</h4>
+                    <p class="text-slate-600">교사가 개인적으로나 직업적으로 번성할 수 있도록 포괄적인 웰빙 전략을 촉진하여 교육에 대한 열정과 역량을 유지합니다.</p>
+                </div>
+                <!-- 6. Learning ecosystem -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="text-teal-500 text-4xl mb-4"><i class="fas fa-sitemap"></i></div>
+                    <h4 class="text-xl font-bold mb-2">학습 생태계</h4>
+                    <p class="text-slate-600">교사를 공동의 책임과 상호 학습을 촉진하는 협력 네트워크 및 파트너십의 핵심 구성원으로 자리매김합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infographic Section: Anchor -->
+        <section class="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-20">
+            <h3 class="text-3xl font-bold text-center mb-10"><i class="fas fa-anchor text-sky-500 mr-3"></i>교사의 내면의 닻: Being, Belonging, Becoming</h3>
+            <p class="max-w-3xl mx-auto text-center text-slate-600 mb-12">교사의 강력한 자기 개념은 세 가지 차원이 상호작용하며 형성됩니다. 이는 변화의 물결 속에서 교사를 지탱하는 핵심적인 힘입니다.</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                <!-- Being -->
+                <div class="text-center w-full md:w-1/3">
+                    <div class="relative inline-block">
+                        <i class="fas fa-user-check text-6xl text-teal-400"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mt-4 mb-2">Being (존재)</h4>
+                    <p class="text-slate-500">진정한 자기 인식. 교사 자신의 가치, 신념, 목적에 대한 깊은 이해를 바탕으로 한 정체성.</p>
+                </div>
+                 <!-- Belonging -->
+                <div class="text-center w-full md:w-1/3">
+                    <div class="relative inline-block">
+                       <i class="fas fa-users text-6xl text-sky-500"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mt-4 mb-2">Belonging (소속)</h4>
+                    <p class="text-slate-500">상호 지지적인 관계. 동료, 학생, 학교 공동체와의 연결을 통해 느끼는 안정감과 신뢰.</p>
+                </div>
+                <!-- Becoming -->
+                <div class="text-center w-full md:w-1/3">
+                    <div class="relative inline-block">
+                        <i class="fas fa-chart-line text-6xl text-indigo-500"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mt-4 mb-2">Becoming (성장)</h4>
+                    <p class="text-slate-500">지속적인 성장과 변화. 끊임없는 학습과 성찰을 통해 전문가로서 발전해 나가는 역동적인 과정.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Teacher & AI Co-agency Section -->
+        <section class="mb-20">
+            <h3 class="text-3xl font-bold text-center mb-10"><i class="fas fa-robot text-sky-500 mr-3"></i>교사와 AI의 협력적 주도성 (Co-agency)</h3>
+            <p class="max-w-3xl mx-auto text-center text-slate-600 mb-12">티칭 컴퍼스는 AI와 같은 새로운 기술과의 공존을 중요하게 다룹니다. 교사는 AI를 대체재가 아닌, 교육의 질을 높이는 보완적 파트너로 활용해야 합니다.</p>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl border-l-4 border-teal-500 shadow-md">
+                    <h4 class="text-xl font-bold mb-3"><i class="fas fa-user mr-2 text-teal-500"></i>교사의 역할 (Human Intelligence)</h4>
+                    <ul class="space-y-2 text-slate-600 list-disc list-inside">
+                        <li><strong>공감과 관계 형성:</strong> 학생과의 정서적 교감</li>
+                        <li><strong>윤리적 판단:</strong> 복잡한 상황에서의 가치 기반 결정</li>
+                        <li><strong>창의적 혁신:</strong> 새로운 교육 방식 고안</li>
+                        <li><strong>맥락적 이해:</strong> 학생의 개별적 상황 고려</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-sky-500 shadow-md">
+                    <h4 class="text-xl font-bold mb-3"><i class="fas fa-brain mr-2 text-sky-500"></i>AI의 역할 (Artificial Intelligence)</h4>
+                    <ul class="space-y-2 text-slate-600 list-disc list-inside">
+                        <li><strong>데이터 분석:</strong> 학생 학습 패턴 파악 및 시각화</li>
+                        <li><strong>맞춤형 자료 제공:</strong> 개인별 수준에 맞는 콘텐츠 추천</li>
+                        <li><strong>반복 업무 자동화:</strong> 채점, 행정 업무 부담 경감</li>
+                        <li><strong>정보 접근성 향상:</strong> 방대한 지식에 대한 빠른 접근</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <div class="text-center mb-8">
+                <h3 class="text-3xl font-bold">
+                    <i class="fas fa-graduation-cap text-sky-500 mr-3"></i>핵심 내용 퀴즈
+                </h3>
+                <p class="text-slate-500 mt-2">학습한 내용을 퀴즈로 확인해보세요!</p>
+            </div>
+            <div id="quiz-container" class="max-w-2xl mx-auto min-h-[300px] flex flex-col justify-center items-center">
+                <div id="question-area" class="w-full">
+                    <p id="question-text" class="text-xl font-semibold text-center mb-6"></p>
+                    <div id="options-container" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                </div>
+                <div id="feedback-area" class="mt-6 text-center">
+                    <p id="feedback-text" class="text-lg font-bold"></p>
+                    <button id="next-btn" class="hidden mt-4 bg-sky-500 text-white font-bold py-2 px-6 rounded-full hover:bg-sky-600 transition-colors">
+                        다음 문제 <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                    <button id="restart-btn" class="hidden mt-4 bg-teal-500 text-white font-bold py-2 px-6 rounded-full hover:bg-teal-600 transition-colors">
+                        퀴즈 다시 시작 <i class="fas fa-redo ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white mt-20">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>본 콘텐츠는 OECD Education Policy Perspectives No. 123 보고서를 기반으로 제작되었습니다.</p>
+            <p class="text-sm text-slate-400 mt-2">© 2024 Educational Content. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const quizData = [
+            {
+                question: "OECD 티칭 컴퍼스의 주된 목적은 무엇을 실현하기 위함인가요?",
+                options: ["교사 급여 인상", "표준화된 시험 도입", "러닝 컴퍼스(Learning Compass)", "학교 시설 현대화"],
+                correctAnswer: 2
+            },
+            {
+                question: "교사의 강력한 자기 개념(내면의 닻)을 구성하는 세 가지 요소가 아닌 것은?",
+                options: ["Being (존재)", "Belonging (소속)", "Becoming (성장)", "Competing (경쟁)"],
+                correctAnswer: 3
+            },
+            {
+                question: "교사가 교육 현장에서 변화를 주도할 수 있는 자율성, 자신감, 역량을 의미하는 티칭 컴퍼스의 핵심 개념은 무엇인가요?",
+                options: ["교사 웰빙", "교사 주도성(Agency)", "학습 생태계", "핵심 역량"],
+                correctAnswer: 1
+            },
+            {
+                question: "보고서에서 교사와 AI의 관계를 어떻게 정의하고 있나요?",
+                options: ["AI가 교사를 완전히 대체", "교사가 AI를 통제하고 감독", "상호 보완적인 협력 관계", "서로 무관한 영역"],
+                correctAnswer: 2
+            },
+            {
+                question: "학생과의 정서적 교감, 윤리적 판단 등은 주로 어떤 주체의 역할로 강조되나요?",
+                options: ["AI 조교", "학부모", "교사 (Human Intelligence)", "학교 행정가"],
+                correctAnswer: 2
+            }
+        ];
+
+        const quizContainer = document.getElementById('quiz-container');
+        const questionText = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        const feedbackText = document.getElementById('feedback-text');
+        const nextBtn = document.getElementById('next-btn');
+        const restartBtn = document.getElementById('restart-btn');
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function startQuiz() {
+            currentQuestionIndex = 0;
+            score = 0;
+            nextBtn.classList.add('hidden');
+            restartBtn.classList.add('hidden');
+            feedbackText.textContent = '';
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const currentQuestion = quizData[currentQuestionIndex];
+            questionText.textContent = currentQuestion.question;
+            optionsContainer.innerHTML = '';
+            
+            currentQuestion.options.forEach((option, index) => {
+                const button = document.createElement('button');
+                button.textContent = option;
+                button.classList.add('w-full', 'p-4', 'border-2', 'rounded-lg', 'text-left', 'transition-all', 'duration-300', 'hover:bg-sky-100', 'hover:border-sky-500', 'font-medium');
+                button.addEventListener('click', () => selectAnswer(index));
+                optionsContainer.appendChild(button);
+            });
+        }
+
+        function selectAnswer(selectedIndex) {
+            const currentQuestion = quizData[currentQuestionIndex];
+            const isCorrect = selectedIndex === currentQuestion.correctAnswer;
+            
+            Array.from(optionsContainer.children).forEach((button, index) => {
+                button.disabled = true;
+                if (index === currentQuestion.correctAnswer) {
+                    button.classList.remove('hover:bg-sky-100', 'hover:border-sky-500');
+                    button.classList.add('bg-teal-500', 'text-white', 'border-teal-500');
+                } else if (index === selectedIndex && !isCorrect) {
+                     button.classList.remove('hover:bg-sky-100', 'hover:border-sky-500');
+                    button.classList.add('bg-red-500', 'text-white', 'border-red-500');
+                }
+            });
+
+            if (isCorrect) {
+                score++;
+                feedbackText.textContent = "정답입니다! 🎉";
+                feedbackText.className = "mt-6 text-lg font-bold text-teal-600";
+            } else {
+                feedbackText.textContent = "아쉽네요. 다시 생각해보세요.";
+                feedbackText.className = "mt-6 text-lg font-bold text-red-600";
+            }
+
+            nextBtn.classList.remove('hidden');
+        }
+
+        function showNextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quizData.length) {
+                feedbackText.textContent = '';
+                nextBtn.classList.add('hidden');
+                showQuestion();
+            } else {
+                showResults();
+            }
+        }
+        
+        function showResults() {
+            questionText.textContent = `퀴즈 완료! 당신의 점수는...`;
+            optionsContainer.innerHTML = `<p class="text-6xl font-extrabold text-center w-full gradient-text">${score} / ${quizData.length}</p>`;
+            feedbackText.textContent = score > (quizData.length / 2) ? "훌륭해요! 핵심 내용을 잘 이해하셨네요." : "조금 더 학습해볼까요? 다시 도전해보세요!";
+            feedbackText.className = "mt-6 text-lg font-bold text-slate-700";
+            nextBtn.classList.add('hidden');
+            restartBtn.classList.remove('hidden');
+        }
+
+        nextBtn.addEventListener('click', showNextQuestion);
+        restartBtn.addEventListener('click', startQuiz);
+
+        // Start the quiz on page load
+        startQuiz();
+    </script>
+</body>
+</html>
